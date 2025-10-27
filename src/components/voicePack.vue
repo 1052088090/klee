@@ -26,7 +26,7 @@
     </template>
     <script setup lang="ts">
 
-    import { ref, computed, watchEffect,onMounted,nextTick } from 'vue';
+    import { ref,onMounted,nextTick } from 'vue';
     const voices = ref([])
     // 加载表情包图片
 const loadVoice = async () => {
@@ -36,7 +36,7 @@ const loadVoice = async () => {
 
   for (const path in modules) {
     voicePromises.push(
-      modules[path]?.().then((module: any) => ({
+      modules[path]?.().then((module: unknown) => ({
         // Vite 默认导出的资源 URL
         src: module.default,
         // 从路径中提取文件名作为名称
@@ -46,12 +46,10 @@ const loadVoice = async () => {
   }
 
   voices.value = await Promise.all(voicePromises);
-  console.log('voices', voices.value);
 };
 loadVoice()
     // 语音播放控制
 const audioElements = ref<HTMLAudioElement[]>([]);
-const audioRefs = ref<InstanceType<typeof HTMLAudioElement>[]>([]);
 const currentVoice = ref(-1);
 const isPlaying = ref(false);
 const progress = ref(0);
@@ -69,7 +67,6 @@ const playVoice = (index: number) => {
   if (currentVoice.value !== -1) {
     audioElements.value[currentVoice.value].pause();
   }
-
   // 播放选中的语音
   currentVoice.value = index;
   audioElements.value[index].play();
@@ -105,7 +102,7 @@ onMounted(() => {
   nextTick(() => {
     const audios = document.querySelectorAll('audio');
     audioElements.value = Array.from(audios) as HTMLAudioElement[];
-    
+
   })
 });
     </script>

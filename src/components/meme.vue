@@ -52,7 +52,12 @@ import { ref, onMounted, onUnmounted } from 'vue';
 
 // --- 状态定义 ---
 // 表情包数据 (使用 any[] 或定义一个接口，这里为了简洁使用 any[])
-const memeData = ref<any[]>([]);
+interface ItemData {
+  id: string;
+  name: string;
+  url: string;
+}
+const memeData = ref<ItemData[]>([]);
 const isViewerOpen = ref(false);
 const currentMemeIndex = ref(0);
 const currentMeme = ref({ url: '', name: '' });
@@ -67,7 +72,7 @@ const loadMemeImages = async () => {
 
   for (const path in modules) {
     memePromises.push(
-      modules[path]?.().then((module: any) => ({
+      modules[path]?.().then((module: unknown) => ({
         // Vite 默认导出的资源 URL
         url: module.default,
         // 从路径中提取文件名作为名称

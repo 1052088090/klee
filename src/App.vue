@@ -60,7 +60,7 @@
               active:navValue === 'others'
             }
             " @click="navValue = 'others'">
-              <span>角色故事</span> 
+              <span>角色故事</span>
               <img src="./assets/3.png" class="nav-icon" />
             </button>
           </div>
@@ -70,12 +70,12 @@
         <!-- 主内容区 - 角色展示 -->
         <main class="feed">
           <!-- 表情包展示区域 -->
-           <meme v-if="['all','meme'].includes(navValue)" />
-      
- 
+           <MeMe v-if="['all','meme'].includes(navValue)" />
+
+
           <!-- 角色语音展示区域 -->
            <voicePack v-if="['all','voice'].includes(navValue)" />
-        
+
 
            <div class="voice-section" v-if="['all','others'].includes(navValue)">
             <h3 class="voice-title">
@@ -132,7 +132,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted, nextTick } from 'vue';
-import meme from '@/components/meme.vue'
+import MeMe from '@/components/MeMe.vue'
 import voicePack from '@/components/voicePack.vue'
 const navValue = ref('all')
 
@@ -143,54 +143,6 @@ const navValue = ref('all')
 
 // 语音播放控制
 const audioElements = ref<HTMLAudioElement[]>([]);
-const currentVoice = ref(-1);
-const isPlaying = ref(false);
-const progress = ref(0);
-
-// 播放/暂停语音
-const playVoice = (index: number) => {
-  // 如果点击的是正在播放的语音，则暂停
-  if (currentVoice.value === index && isPlaying.value) {
-    audioElements.value[index].pause();
-    isPlaying.value = false;
-    return;
-  }
-
-  // 停止当前正在播放的语音
-  if (currentVoice.value !== -1) {
-    audioElements.value[currentVoice.value].pause();
-  }
-
-  // 播放选中的语音
-  currentVoice.value = index;
-  audioElements.value[index].play();
-  isPlaying.value = true;
-
-  // 播放时添加角色动画效果
-  const avatar = document.querySelector('.avatar');
-  if (avatar) {
-    avatar.classList.add('talking');
-    setTimeout(() => {
-      avatar.classList.remove('talking');
-    }, 3000);
-  }
-};
-
-// 音频播放结束
-const onAudioEnded = () => {
-  isPlaying.value = false;
-  progress.value = 0;
-};
-
-// 更新播放进度
-const updateProgress = (index: number) => {
-  if (currentVoice.value !== index) return;
-
-  const audio = audioElements.value[index];
-  if (audio.duration) {
-    progress.value = (audio.currentTime / audio.duration) * 100;
-  }
-};
 
 
 
