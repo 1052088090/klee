@@ -132,7 +132,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted, nextTick } from 'vue';
-import MeMe from '@/components/MeMe.vue'
+import MeMe from '@/components/emoticon.vue'
 import voicePack from '@/components/voicePack.vue'
 const navValue = ref('all')
 

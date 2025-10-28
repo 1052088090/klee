@@ -27,19 +27,9 @@
       <button class="meme-close-btn" @click="closeMemeViewer">
         <i class="fa fa-times"></i>
       </button>
-
-      <!-- <button class="meme-nav-btn prev" @click="prevMeme" v-if="currentMemeIndex > 0">
-        <i class="fa fa-chevron-left"></i>
-      </button> -->
-
       <div class="meme-image-container">
         <img :src="currentMeme.url" :alt="currentMeme.name" class="meme-large-image" />
       </div>
-
-      <!-- <button class="meme-nav-btn next" @click="nextMeme" v-if="currentMemeIndex < memeData.length - 1">
-        <i class="fa fa-chevron-right"></i>
-      </button> -->
-
       <div class="meme-counter">
         {{ currentMemeIndex + 1 }} / {{ memeData.length }}
       </div>
@@ -68,17 +58,24 @@ const currentMeme = ref({ url: '', name: '' });
 const loadMemeImages = async () => {
   // 注意：这里的路径是基于 Vite/Webpack 的模块解析
   const modules = import.meta.glob('@/assets/meme/*.{jpg,jpeg,png,gif,avif}');
-  const memePromises = [];
+  const memePromises: Promise<ItemData>[] = [];
 
   for (const path in modules) {
-    memePromises.push(
-      modules[path]?.().then((module: unknown) => ({
-        // Vite 默认导出的资源 URL
-        url: module.default,
+    const promise = modules[path]?.().then((module: unknown) => {
+      // 类型检查并转换
+      const typedModule = module as { default: string };
+      return {
+        // 生成唯一ID
+        id: path,
+        // Vite 默认导出的资产 URL
+        url: typedModule.default,
         // 从路径中提取文件名作为名称
-        name: path.split('/').pop()
-      }))
-    );
+        name: path.split('/').pop() || ''
+      };
+    });
+    if (promise) {
+      memePromises.push(promise);
+    }
   }
 
   memeData.value = await Promise.all(memePromises);
@@ -88,7 +85,10 @@ const loadMemeImages = async () => {
 // 打开表情包查看器
 const openMemeViewer = (index: number) => {
   currentMemeIndex.value = index;
-  currentMeme.value = memeData.value[index];
+  const meme = memeData.value[index];
+  if (meme) {
+    currentMeme.value = { url: meme.url, name: meme.name };
+  }
   isViewerOpen.value = true;
   // 防止页面滚动
   document.body.style.overflow = 'hidden';
@@ -105,7 +105,10 @@ const closeMemeViewer = () => {
 const prevMeme = () => {
   if (currentMemeIndex.value > 0) {
     currentMemeIndex.value--;
-    currentMeme.value = memeData.value[currentMemeIndex.value];
+    const meme = memeData.value[currentMemeIndex.value];
+    if (meme) {
+      currentMeme.value = { url: meme.url, name: meme.name };
+    }
   }
 };
 
@@ -113,7 +116,10 @@ const prevMeme = () => {
 const nextMeme = () => {
   if (currentMemeIndex.value < memeData.value.length - 1) {
     currentMemeIndex.value++;
-    currentMeme.value = memeData.value[currentMemeIndex.value];
+    const meme = memeData.value[currentMemeIndex.value];
+    if (meme) {
+      currentMeme.value = { url: meme.url, name: meme.name };
+    }
   }
 };
 
