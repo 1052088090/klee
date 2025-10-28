@@ -1,0 +1,314 @@
+/* 全局主题变量 */
+:root {
+  /* 亮色主题变量 */
+  --primary: #E62E2E;
+  --secondary-1: #8B4513;
+  --secondary-2: #FF7F00;
+  --accent: #FFD700;
+  --bg: #F5F5DC;
+  --card-bg: #FFFFFF;
+  --text: #333333;
+  --text-light: #5A5A5A;
+  --border: #D8C8A0;
+  --shadow: rgba(139, 69, 19, 0.15);
+  --nav-bg: rgba(245, 245, 220, 0.95);
+  --nav-text: #333333;
+  --nav-hover: #E62E2E;
+  --nav-active: #FF7F00;
+  --btn-primary-bg: #E62E2E;
+  --btn-primary-text: #F5F5DC;
+  --btn-secondary-bg: #8B4513;
+  --btn-secondary-text: #F5F5DC;
+  --accent-light: #FFE580;
+  --success: #4CAF50;
+  --success-light: #66BB6A;
+  --warning: #FF9800;
+  --warning-light: #FFA726;
+  --danger: #F44336;
+  --danger-light: #EF5350;
+  --bomb-color: #4a4a4a;
+  --bomb-highlight: #2a2a2a;
+  --fuse-color: #8B4513;
+  --spark-color: #FF7F00;
+  --explosion-core: #FFD700;
+  --explosion-ring: #FF5252;
+  --code-bg: #ede0c0;
+  --primary-rgb: 230, 46, 46;
+}
+
+.dark {
+  /* 暗色主题变量 */
+  --primary: #FF5252;
+  --secondary-1: #A5673F;
+  --secondary-2: #FF9A3D;
+  --accent: #FFE066;
+  --bg: #1A1A1A;
+  --card-bg: #2A2A2A;
+  --text: #E0E0E0;
+  --text-light: #AAAAAA;
+  --border: #5D2E0F;
+  --shadow: rgba(0, 0, 0, 0.4);
+  --nav-bg: rgba(26, 26, 26, 0.95);
+  --nav-text: #E0E0E0;
+  --nav-hover: #FF9A3D;
+  --nav-active: #FFE066;
+  --btn-primary-bg: #FF5252;
+  --btn-primary-text: #1A1A1A;
+  --btn-secondary-bg: #A5673F;
+  --btn-secondary-text: #F5F5DC;
+  --accent-light: #FFE066;
+  --success: #66BB6A;
+  --success-light: #81C784;
+  --warning: #FFA726;
+  --warning-light: #FFB74D;
+  --danger: #EF5350;
+  --danger-light: #E57373;
+  --bomb-color: #333;
+  --bomb-highlight: #222;
+  --fuse-color: #5D2E0F;
+  --spark-color: #FF9A3D;
+  --explosion-core: #FFE066;
+  --explosion-ring: #FF5252;
+  --code-bg: #30251d;
+  --primary-rgb: 255, 82, 82;
+}
+
+/* 全局样式重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  transition: all 0.3s ease;
+}
+
+/* 页面容器样式 */
+.app-container {
+  min-height: 100vh;
+  background-color: var(--bg);
+  color: var(--text);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* 背景装饰 */
+.bg-decorations {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bg-blur {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.15;
+  animation: float 15s ease-in-out infinite;
+}
+
+.blur-1 {
+  top: 20%;
+  left: 15%;
+  width: 500px;
+  height: 500px;
+  background-color: var(--primary);
+  animation-delay: 0s;
+}
+
+.blur-2 {
+  bottom: 25%;
+  right: 20%;
+  width: 450px;
+  height: 450px;
+  background-color: var(--secondary-2);
+  animation-delay: 3s;
+}
+
+.blur-3 {
+  top: 60%;
+  left: 60%;
+  width: 400px;
+  height: 400px;
+  background-color: var(--accent);
+  animation-delay: 6s;
+}
+
+/* 主容器 */
+.main-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  position: relative;
+  z-index: 10;
+}
+
+/* 内容布局 */
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-height: 100vh;
+}
+
+@media (min-width: 1024px) {
+  .content-wrapper {
+    flex-direction: row;
+  }
+}
+
+/* 主内容区 */
+.feed {
+  flex: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: calc(100vh - 50px);
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.feed::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .feed {
+    margin: 0;
+  }
+}
+
+/* 卡片通用样式 */
+.card {
+  background-color: var(--card-bg);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 12px var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px var(--shadow);
+  border-color: var(--primary);
+}
+
+/* 区块标题样式 */
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  color: var(--primary);
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* 装饰元素 */
+.card-decoration {
+  position: fixed;
+  color: rgba(var(--primary-rgb), 0.15);
+  animation: float 8s ease-in-out infinite;
+  pointer-events: none;
+  transform-origin: center;
+  transition: all 1s ease;
+}
+
+.card-decoration:hover {
+  color: rgba(var(--primary-rgb), 0.3);
+  transform: scale(1.2) rotate(0deg);
+  z-index: 5;
+}
+
+.card-1 {
+  right: 5%;
+  top: 20%;
+  font-size: 140px;
+  transform: rotate(15deg);
+}
+
+.card-2 {
+  left: 8%;
+  bottom: 30%;
+  font-size: 110px;
+  transform: rotate(-10deg);
+  animation-delay: 2s;
+}
+
+.card-3 {
+  left: 30%;
+  top: 70%;
+  font-size: 90px;
+  transform: rotate(5deg);
+  animation-delay: 4s;
+}
+
+/* 动画定义 */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(15deg);
+  }
+  50% {
+    transform: translateY(-25px) rotate(15deg);
+  }
+}
+
+@keyframes levelPulse {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(var(--primary-rgb), 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(var(--primary-rgb), 0.6);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes headShake {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+}

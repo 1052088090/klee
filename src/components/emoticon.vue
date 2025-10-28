@@ -152,6 +152,40 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
+/* 语音区块样式（表情包区块复用） */
+.voice-section {
+  background-color: var(--card-bg);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 12px var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.voice-section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px var(--shadow);
+  border-color: var(--primary);
+}
+
+.voice-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  color: var(--primary);
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.voice-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 /* ========================= */
 /* ⭐ 可莉牌表情包查看器样式升级部分 ⭐ */
 /* ========================= */
