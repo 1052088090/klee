@@ -233,5 +233,54 @@ const timelineEvents = ref<TimelineEvent[]>([
   .timeline-item:hover .timeline-marker {
     transform: translateX(0) scale(1.3);
   }
+  
+  .timeline-content {
+    max-width: calc(100% - 60px);
+    padding: 16px;
+  }
+  
+  .page-title {
+    font-size: 24px;
+  }
+  
+  .page-description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline::before {
+    left: 15px;
+  }
+  
+  .timeline-item.left,
+  .timeline-item.right {
+    padding-left: 50px;
+    padding-right: 0;
+  }
+  
+  .timeline-marker {
+    left: 15px;
+    width: 16px;
+    height: 16px;
+  }
+  
+  .timeline-content {
+    max-width: calc(100% - 50px);
+    padding: 12px;
+  }
+  
+  .timeline-date {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+  
+  .timeline-title {
+    font-size: 18px;
+  }
+  
+  .timeline-description {
+    font-size: 13px;
+  }
 }
 </style>

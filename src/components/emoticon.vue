@@ -376,4 +376,78 @@ onUnmounted(() => {
   transition: all 0.3s ease;
   flex-shrink: 0;
 }
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .voice-section {
+    padding: 12px;
+  }
+  
+  .voice-title {
+    font-size: 14px;
+  }
+  
+  .meme-item {
+    padding: 8px;
+  }
+  
+  .meme-item img {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  
+  .meme-viewer-content {
+    padding: 10px;
+  }
+  
+  .meme-large-image {
+    max-height: 60vh;
+  }
+  
+  .meme-nav-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+  
+  .meme-nav-btn.prev {
+    left: -20px;
+  }
+  
+  .meme-nav-btn.next {
+    right: -20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .meme-item {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+  
+  .meme-item img {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  
+  .meme-nav-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+  
+  .meme-nav-btn.prev {
+    left: -15px;
+  }
+  
+  .meme-nav-btn.next {
+    right: -15px;
+  }
+  
+  .meme-counter {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+}
 </style>

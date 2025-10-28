@@ -256,4 +256,80 @@ const closeViewer = () => {
   color: var(--text-light);
   font-size: 14px;
 }
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .page-header {
+    padding: 24px 16px;
+  }
+  
+  .page-title {
+    font-size: 24px;
+  }
+  
+  .page-description {
+    font-size: 14px;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+  }
+  
+  .gallery-item {
+    border-radius: 8px;
+  }
+  
+  .gallery-overlay {
+    padding: 12px;
+  }
+  
+  .gallery-overlay h3 {
+    font-size: 14px;
+  }
+  
+  .gallery-overlay p {
+    font-size: 11px;
+  }
+  
+  .viewer-content {
+    padding: 15px;
+  }
+  
+  .viewer-content img {
+    max-height: 60vh;
+  }
+  
+  .viewer-info h3 {
+    font-size: 18px;
+  }
+  
+  .viewer-info p {
+    font-size: 13px;
+  }
+  
+  .viewer-close {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+    top: -12px;
+    right: -12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+  }
+  
+  .gallery-item {
+    aspect-ratio: 3/3; /* 方形图片 */
+  }
+  
+  .viewer-content {
+    padding: 10px;
+    margin: 0 10px;
+  }
+}
 </style>

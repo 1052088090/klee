@@ -76,6 +76,42 @@ defineExpose({
   }
 }
 
+/* 移动端适配 */
+@media (max-width: 767px) {
+  .sidebar {
+    max-width: 100%;
+    padding: 16px;
+  }
+  
+  .character-card {
+    padding: 16px;
+  }
+  
+  .avatar-frame {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 12px;
+  }
+  
+  .character-name {
+    font-size: 20px;
+  }
+  
+  .character-title {
+    font-size: 12px;
+  }
+  
+  .nav-btn {
+    padding: 12px 10px;
+    font-size: 14px;
+  }
+  
+  .nav-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
 /* 角色卡片 */
 .character-card {
   background-color: var(--card-bg);

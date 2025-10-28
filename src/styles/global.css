@@ -219,6 +219,7 @@
   pointer-events: none;
   transform-origin: center;
   transition: all 1s ease;
+  display: block;
 }
 
 .card-decoration:hover {
@@ -310,5 +311,49 @@
   }
   75% {
     transform: rotate(5deg);
+  }
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .main-container {
+    padding: 24px 10px;
+  }
+
+  .card-decoration {
+    display: none;
+  }
+
+  .content-wrapper {
+    max-height: calc(100vh - 60px); /* 考虑底部导航高度 */
+  }
+  
+  .feed {
+    height: auto;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+  }
+}
+
+/* 小屏手机适配 */
+@media (max-width: 480px) {
+  .main-container {
+    padding: 16px 8px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .section-title {
+    font-size: 16px;
+  }
+
+  .page-title {
+    font-size: 24px !important;
+  }
+
+  .page-description {
+    font-size: 14px !important;
   }
 }
