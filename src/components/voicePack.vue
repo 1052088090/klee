@@ -266,4 +266,51 @@ audio {
     transform: scale(0.8);
   }
 }
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .voice-section {
+    padding: 12px;
+  }
+  
+  .voice-title {
+    font-size: 14px;
+  }
+  
+  .voice-item {
+    padding: 8px;
+    gap: 8px;
+  }
+  
+  .voice-text p {
+    font-size: 13px;
+  }
+  
+  .voice-play-btn {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .voice-tag {
+    font-size: 10px;
+    padding: 1px 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .voice-item {
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .voice-play-btn {
+    align-self: flex-start;
+  }
+  
+  .voice-text p {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
+}
 </style>

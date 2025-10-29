@@ -324,4 +324,78 @@ blockquote:hover {
   transform: translateX(5px);
   box-shadow: 0 4px 10px var(--shadow);
 }
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .page-header {
+    padding: 24px 16px;
+  }
+  
+  .page-title {
+    font-size: 24px;
+  }
+  
+  .page-description {
+    font-size: 14px;
+  }
+  
+  .info-card {
+    padding: 16px;
+  }
+  
+  .card-title {
+    font-size: 20px;
+  }
+  
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .description-content p {
+    font-size: 14px;
+  }
+  
+  .skill-item {
+    padding: 16px;
+  }
+  
+  .skill-icon {
+    font-size: 40px;
+  }
+  
+  .skill-item h3 {
+    font-size: 16px;
+  }
+  
+  .skill-item p {
+    font-size: 13px;
+  }
+  
+  .relationship-item h3 {
+    font-size: 16px;
+  }
+  
+  .relationship-item p {
+    font-size: 13px;
+  }
+  
+  blockquote {
+    font-size: 15px;
+    padding: 12px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .info-item {
+    padding: 12px;
+  }
+}
 </style>

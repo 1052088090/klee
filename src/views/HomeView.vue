@@ -104,4 +104,22 @@ const emit = defineEmits<{
 .post-image:hover {
   transform: scale(1.05);
 }
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .voice-section {
+    padding: 12px;
+  }
+  
+  .post-image {
+    max-height: 200px;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 480px) {
+  .post-image {
+    max-height: 150px;
+  }
+}
 </style>
