@@ -4,6 +4,7 @@
     "vitest.explorer",
     "dbaeumer.vscode-eslint",
     "EditorConfig.EditorConfig",
-    "oxc.oxc-vscode"
+    "oxc.oxc-vscode",
+    "qwenlm.qwen-code-vscode-ide-companion"
   ]
 }
