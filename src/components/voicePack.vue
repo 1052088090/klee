@@ -1,7 +1,7 @@
 <template>
       <div class="voice-section">
             <h3 class="voice-title">
-              <img src="@/assets/1.png" style="width: 25px;height: 25px;" />
+              <img src="@/assets/1.webp" style="width: 25px;height: 25px;" />
               角色语音
             </h3>
             <div class="voice-list">

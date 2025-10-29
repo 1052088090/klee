@@ -2,7 +2,14 @@
   "permissions": {
     "allow": [
       "Bash(npm run type-check:*)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(awk:*)",
+      "Bash(dir:*)",
+      "Bash(magick:*)",
+      "Bash(ffmpeg:*)",
+      "Bash(npm install:*)",
+      "Bash(cat:*)",
+      "Bash(node:*)"
     ],
     "deny": [],
     "ask": []

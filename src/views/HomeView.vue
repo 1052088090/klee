@@ -9,36 +9,36 @@
     <!-- 角色故事 -->
     <div class="voice-section">
       <h3 class="section-title">
-        <img src="@/assets/1.png" style="width: 25px;height: 25px;" alt="图标" />
+        <img src="@/assets/1.webp" style="width: 25px;height: 25px;" alt="图标" />
         清夏！乐园？大秘境！
       </h3>
       <div class="story-content">
         <div class="post-image-container">
-          <img src="@/assets/3.8.png" alt="可莉战斗" class="post-image">
+          <img src="@/assets/3.8.webp" alt="可莉战斗" class="post-image">
         </div>
       </div>
     </div>
 
     <div class="voice-section">
       <h3 class="section-title">
-        <img src="@/assets/1.png" style="width: 25px;height: 25px;" alt="图标" />
+        <img src="@/assets/1.webp" style="width: 25px;height: 25px;" alt="图标" />
         仲夏！幻夜？奇想曲！
       </h3>
       <div class="story-content">
         <div class="post-image-container">
-          <img src="@/assets/2.8.png" alt="可莉战斗" class="post-image">
+          <img src="@/assets/2.8.webp" alt="可莉战斗" class="post-image">
         </div>
       </div>
     </div>
 
     <div class="voice-section">
       <h3 class="section-title">
-        <img src="@/assets/1.png" style="width: 25px;height: 25px;" alt="图标" />
+        <img src="@/assets/1.webp" style="width: 25px;height: 25px;" alt="图标" />
         嘟嘟可故事集
       </h3>
       <div class="story-content">
         <div class="post-image-container">
-          <img src="@/assets/ddk.png" alt="可莉战斗" class="post-image">
+          <img src="@/assets/ddk.webp" alt="可莉战斗" class="post-image">
         </div>
       </div>
     </div>

@@ -44,22 +44,22 @@ interface GalleryImage {
 
 const images = ref<GalleryImage[]>([
   {
-    src: new URL('@/assets/3.8.png', import.meta.url).href,
+    src: new URL('@/assets/3.8.webp', import.meta.url).href,
     title: '清夏！乐园？大秘境！',
     description: '可莉的夏日冒险'
   },
   {
-    src: new URL('@/assets/2.8.png', import.meta.url).href,
+    src: new URL('@/assets/2.8.webp', import.meta.url).href,
     title: '仲夏！幻夜？奇想曲！',
     description: '魔法般的夏日夜晚'
   },
   {
-    src: new URL('@/assets/ddk.png', import.meta.url).href,
+    src: new URL('@/assets/ddk.webp', import.meta.url).href,
     title: '嘟嘟可故事集',
     description: '可莉与嘟嘟可的故事'
   },
   {
-    src: new URL('@/assets/klee.png', import.meta.url).href,
+    src: new URL('@/assets/klee.webp', import.meta.url).href,
     title: '火花骑士可莉',
     description: '西风骑士团最可爱的成员'
   }

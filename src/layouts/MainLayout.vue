@@ -10,23 +10,23 @@
     <!-- 移动端顶部导航 -->
     <nav class="mobile-nav" v-if="isMobile">
       <div class="mobile-nav-item" :class="{ active: $route.path === '/' }" @click="navigateTo('/')">
-        <img src="@/assets/3.png" alt="主页" />
+        <img src="@/assets/3.webp" alt="主页" />
         <span>主页</span>
       </div>
       <div class="mobile-nav-item" :class="{ active: $route.path === '/voice' }" @click="navigateTo('/voice')">
-        <img src="@/assets/1.png" alt="语音" />
+        <img src="@/assets/1.webp" alt="语音" />
         <span>语音</span>
       </div>
       <div class="mobile-nav-item" :class="{ active: $route.path === '/meme' }" @click="navigateTo('/meme')">
-        <img src="@/assets/3.png" alt="表情包" />
+        <img src="@/assets/3.webp" alt="表情包" />
         <span>表情包</span>
       </div>
       <div class="mobile-nav-item" :class="{ active: $route.path === '/gallery' }" @click="navigateTo('/gallery')">
-        <img src="@/assets/22.png" alt="图集" />
+        <img src="@/assets/22.webp" alt="图集" />
         <span>图集</span>
       </div>
       <div class="mobile-nav-item" :class="{ active: $route.path === '/about' }" @click="navigateTo('/about')">
-        <img src="@/assets/1.png" alt="关于" />
+        <img src="@/assets/1.webp" alt="关于" />
         <span>关于</span>
       </div>
     </nav>

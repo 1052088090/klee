@@ -3,7 +3,7 @@
     <!-- 角色卡片 -->
     <div class="character-card">
       <div class="avatar-frame">
-        <img src="@/assets/klee.png" alt="可莉" class="avatar" :class="{ talking: isTalking }">
+        <img src="@/assets/klee.webp" alt="可莉" class="avatar" :class="{ talking: isTalking }">
       </div>
       <h2 class="character-name">可莉</h2>
       <p class="character-title">西风骑士团·火花骑士</p>
@@ -13,32 +13,32 @@
     <nav class="nav-buttons">
       <RouterLink to="/" class="nav-btn" :class="{ active: $route.path === '/' }">
         <span>主页</span>
-        <img src="@/assets/3.png" class="nav-icon" alt="主页" />
+        <img src="@/assets/3.webp" class="nav-icon" alt="主页" />
       </RouterLink>
 
       <RouterLink to="/voice" class="nav-btn" :class="{ active: $route.path === '/voice' }">
         <span>角色语音</span>
-        <img src="@/assets/1.png" class="nav-icon" alt="语音" />
+        <img src="@/assets/1.webp" class="nav-icon" alt="语音" />
       </RouterLink>
 
       <RouterLink to="/meme" class="nav-btn" :class="{ active: $route.path === '/meme' }">
         <span>表情包</span>
-        <img src="@/assets/3.png" class="nav-icon" alt="表情包" />
+        <img src="@/assets/3.webp" class="nav-icon" alt="表情包" />
       </RouterLink>
 
       <RouterLink to="/gallery" class="nav-btn" :class="{ active: $route.path === '/gallery' }">
         <span>图集</span>
-        <img src="@/assets/22.png" class="nav-icon" alt="图集" />
+        <img src="@/assets/22.webp" class="nav-icon" alt="图集" />
       </RouterLink>
 
       <RouterLink to="/timeline" class="nav-btn" :class="{ active: $route.path === '/timeline' }">
         <span>时间线</span>
-        <img src="@/assets/4.png" class="nav-icon" alt="时间线" />
+        <img src="@/assets/4.webp" class="nav-icon" alt="时间线" />
       </RouterLink>
 
       <RouterLink to="/about" class="nav-btn" :class="{ active: $route.path === '/about' }">
         <span>关于可莉</span>
-        <img src="@/assets/1.png" class="nav-icon" alt="关于" />
+        <img src="@/assets/1.webp" class="nav-icon" alt="关于" />
       </RouterLink>
     </nav>
   </aside>

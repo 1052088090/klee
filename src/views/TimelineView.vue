@@ -36,19 +36,19 @@ const timelineEvents = ref<TimelineEvent[]>([
     date: '1.0 版本',
     title: '初次登场',
     description: '可莉作为五星火属性角色首次在《原神》中登场，成为蒙德城的标志性角色之一。',
-    image: new URL('@/assets/klee.png', import.meta.url).href
+    image: new URL('@/assets/klee.webp', import.meta.url).href
   },
   {
     date: '1.6 版本',
     title: '仲夏！幻夜？奇想曲！',
     description: '可莉的第一个专属活动，玩家们跟随可莉探索金苹果群岛的奇妙冒险。',
-    image: new URL('@/assets/2.8.png', import.meta.url).href
+    image: new URL('@/assets/2.8.webp', import.meta.url).href
   },
   {
     date: '2.8 版本',
     title: '清夏！乐园？大秘境！',
     description: '金苹果群岛再次开放，可莉与大家一起度过了美好的夏日时光。',
-    image: new URL('@/assets/3.8.png', import.meta.url).href
+    image: new URL('@/assets/3.8.webp', import.meta.url).href
   },
   {
     date: '3.8 版本',
@@ -59,7 +59,7 @@ const timelineEvents = ref<TimelineEvent[]>([
     date: '嘟嘟可',
     title: '嘟嘟可故事集',
     description: '可莉最喜欢的玩具和好朋友，陪伴她度过了无数快乐时光。',
-    image: new URL('@/assets/ddk.png', import.meta.url).href
+    image: new URL('@/assets/ddk.webp', import.meta.url).href
   }
 ])
 </script>
