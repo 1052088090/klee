@@ -48,7 +48,7 @@
       </div>
 
       <!-- 特长 -->
-      <div class="info-card">
+      <!-- <div class="info-card">
         <h2 class="card-title">特长与爱好</h2>
         <div class="skills-grid">
           <div class="skill-item">
@@ -72,7 +72,7 @@
             <p>最好的朋友和玩伴</p>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- 关系 -->
       <div class="info-card">

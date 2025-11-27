@@ -177,10 +177,7 @@ onUnmounted(() => {
   background-color: rgba(var(--primary-rgb), 0.1);
 }
 
-.mobile-nav-item:hover img,
-.mobile-nav-item.active img {
-  filter: brightness(0) saturate(100%) invert(29%) sepia(51%) saturate(3261%) hue-rotate(348deg) brightness(97%) contrast(96%);
-}
+
 
 /* 移动端汉堡菜单按钮 */
 .mobile-menu-btn {

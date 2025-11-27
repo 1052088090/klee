@@ -1,26 +1,6 @@
 <template>
   <div class="voice-section">
-    <h3 class="voice-title">
-      <img src="../assets/1.webp" style="width: 25px;height: 25px;" alt="表情包图标" />
-      表情包
-    </h3>
-    <div class="voice-list">
-      <div style="display: flex;gap: 30px;flex-wrap: wrap;">
-        <div v-if="memeData.length === 0"
-          style="display: flex;align-items: center;justify-content: center;width: 100%;">
-          <div>
-            <img src="../assets/4.webp" style="width: 150px;height: 150px;" alt="加载中" />
-            <div style="width: 150px;display: flex;align-items: center;justify-content: center;">表情包正在加载中...
-            </div>
-          </div>
-        </div>
-        <div class="meme-item" v-for="(item, index) in memeData" :key="index" @click="openMemeViewer(index)">
-          <img :src="item.url" :alt="item.name"
-            style="width: 100px; height: 100px; cursor: pointer; transition: transform 0.3s ease;" />
-        </div>
-      </div>
     </div>
-  </div>
 
   <div class="meme-viewer" v-if="isViewerOpen" @click="closeMemeViewer">
     <div class="meme-viewer-content" @click.stop>
