@@ -43,7 +43,7 @@
         <div class="description-content">
           <p>可莉是西风骑士团的火花骑士，也是最受欢迎的成员之一。尽管年纪尚小，但她已经掌握了强大的火元素力量。</p>
           <p>她热爱冒险和探索，最喜欢的活动就是炸鱼。虽然经常因为过于热情而惹麻烦，但她的善良和活力总能感染身边的每一个人。</p>
-          <p>可莉的母亲是著名的冒险家爱丽丝，她从母亲那里继承了对冒险的热爱和对炸弹的独特见解。</p>
+          <p>可莉的母亲是著名的冒险家艾莉丝，她从母亲那里继承了对冒险的热爱和对炸弹的独特见解。</p>
         </div>
       </div>
 
@@ -87,7 +87,7 @@
             <p>可莉的大哥哥，炼金术师，经常照顾可莉</p>
           </div>
           <div class="relationship-item">
-            <h3>爱丽丝</h3>
+            <h3>艾莉丝</h3>
             <p>可莉的母亲，著名冒险家，教会了可莉很多知识</p>
           </div>
         </div>
@@ -330,59 +330,59 @@ blockquote:hover {
   .page-header {
     padding: 24px 16px;
   }
-  
+
   .page-title {
     font-size: 24px;
   }
-  
+
   .page-description {
     font-size: 14px;
   }
-  
+
   .info-card {
     padding: 16px;
   }
-  
+
   .card-title {
     font-size: 20px;
   }
-  
+
   .info-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .description-content p {
     font-size: 14px;
   }
-  
+
   .skill-item {
     padding: 16px;
   }
-  
+
   .skill-icon {
     font-size: 40px;
   }
-  
+
   .skill-item h3 {
     font-size: 16px;
   }
-  
+
   .skill-item p {
     font-size: 13px;
   }
-  
+
   .relationship-item h3 {
     font-size: 16px;
   }
-  
+
   .relationship-item p {
     font-size: 13px;
   }
-  
+
   blockquote {
     font-size: 15px;
     padding: 12px 16px;
@@ -393,7 +393,7 @@ blockquote:hover {
   .skills-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .info-item {
     padding: 12px;
   }
